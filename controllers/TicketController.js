@@ -121,7 +121,7 @@ const deleteTicket = async (req, res) => {
 }
 
 module.exports = {
-  getFlight,
+  getTicket,
   getTicketByUser,
   getFlightsFromTicket,
   createTicket,

@@ -1,4 +1,4 @@
-const { User } = require('../models')
+const { User, Ticket } = require('../models')
 const middleware = require('../middleware')
 const { Op } = require('sequelize')
 
@@ -11,15 +11,15 @@ const getAllUser = async (req, res) => {
   }
 }
 
-// const getOneUser = async (req, res) => {
-//   try {
-//     let userId = parseInt(req.params.user_id)
-//     const user = await User.findByPk(userId, { include: [{ model: Playlist }] })
-//     res.send(user)
-//   } catch (error) {
-//     throw error
-//   }
-// }
+const getOneUser = async (req, res) => {
+  try {
+    let userId = parseInt(req.params.user_id)
+    const user = await User.findByPk(userId, { include: [{ model: Ticket }] })
+    res.send(user)
+  } catch (error) {
+    throw error
+  }
+}
 
 const LoginUser = async (req, res) => {
   try {
@@ -187,7 +187,7 @@ const deleteUser = async (req, res) => {
 }
 module.exports = {
   getAllUser,
-  // getOneUser,
+  getOneUser,
   LoginUser,
   RegisterUser,
   CheckLogin,

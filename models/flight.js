@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
   class Flight extends Model {
     static associate(models) {
       Flight.belongsToMany(models.Ticket, {
-        as: 'tickets',
+        as: 'flights',
         through: models.Ticket_flight,
         foreignKey: 'flightId'
       })
@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
       departTime: DataTypes.TIME,
       arrivalTime: DataTypes.TIME,
       airline: DataTypes.STRING,
-      duration: DataTypes.INTEGER
+      duration: DataTypes.TIME
     },
     {
       sequelize,

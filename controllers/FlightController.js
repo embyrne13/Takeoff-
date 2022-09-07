@@ -18,19 +18,25 @@ const getFilteredFlights = async (req, res) => {
 
 const findMatchingFlight = async (req, res) => {
   try {
-    let flightQuery = req.query.name
-    let flightFound = await Flight.findOne({
-      where: { name: flightQuery },
-      raw: true
-    })
-    if (flightFound) {
-      res.send(flightFound)
-    } else {
-      res.send({ message: 'flight not in database' })
-    }
+    const allFlight = await Flight.findAll()
+    res.send(allFlight)
   } catch (error) {
     throw error
   }
+  // try {
+  //   let flightQuery = req.query.name
+  //   let flightFound = await Flight.findOne({
+  //     where: { name: flightQuery },
+  //     raw: true
+  //   })
+  //   if (flightFound) {
+  //     res.send(flightFound)
+  //   } else {
+  //     res.send({ message: 'flight not in database' })
+  //   }
+  // } catch (error) {
+  //   throw error
+  // }
 }
 
 const getOneFlight = async (req, res) => {

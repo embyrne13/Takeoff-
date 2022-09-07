@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'userId'
       })
       Ticket.belongsToMany(models.Flight, {
-        as: 'flights',
+        as: 'tickets',
         through: models.Ticket_flight,
         foreignKey: 'ticketId'
       })
@@ -15,14 +15,14 @@ module.exports = (sequelize, DataTypes) => {
   }
   Ticket.init(
     {
-      userId: DataTypes.INTEGER,
       flightDepartDate: DataTypes.DATE,
       flightArrivalDate: DataTypes.DATE,
       bookingDate: DataTypes.DATE,
       email: DataTypes.STRING,
       phone: DataTypes.STRING,
       flightFare: DataTypes.STRING,
-      refNumber: DataTypes.STRING
+      refNumber: DataTypes.STRING,
+      userId: DataTypes.INTEGER
     },
     {
       sequelize,

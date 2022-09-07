@@ -1,0 +1,24 @@
+{
+  "name": "takeoff-",
+  "version": "1.0.0",
+  "description": "## Date: 9/1/2022",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/embyrne13/Takeoff-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/embyrne13/Takeoff-/issues"
+  },
+  "homepage": "https://github.com/embyrne13/Takeoff-#readme",
+  "dependencies": {
+    "pg": "^8.8.0",
+    "sequelize": "^6.21.4"
+  }
+}

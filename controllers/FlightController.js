@@ -26,16 +26,10 @@ const findFlight = async (req, res) => {
   }
 }
 const findMatchingFlight = async (req, res) => {
-  // try {
-  //   const allFlight = await Flight.findAll()
-  //   res.send(allFlight)
-  // } catch (error) {
-  //   throw error
-  // }
   try {
     let flightDestination = req.query.destination
     let flightOrigin = req.query.origin
-    let flightFound = await Flight.findOne({
+    let flightFound = await Flight.findAll({
       where: { destination: flightDestination, origin: flightOrigin },
       raw: true
     })

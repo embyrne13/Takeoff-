@@ -32,8 +32,8 @@ Welcome to Takeoff! You will be able to look and book flights. This is your futu
 
 ### **_Screenshots_**
 
-![Takeoff Home](../Takeoff-/Images/TakeoffHome.png)
-![Takeoff Flight](../Takeoff-/Images/TakeoffFlights.png)
+![Takeoff Home](Images/TakeoffHome.png)
+![Takeoff Flight](Images/TakeoffFlights.png)
 
 ---
 

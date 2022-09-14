@@ -32,20 +32,14 @@ Welcome to Takeoff! You will be able to look and book flights. This is your futu
 
 ### **_Screenshots_**
 
-![]()
+![Takeoff Home](../Takeoff-/Images/TakeoffHome.png)
+![Takeoff Flight](../Takeoff-/Images/TakeoffFlights.png)
 
 ---
 
 ### **_Future Updates_**
 
-- []
-
----
-
-### **_Credits_**
-
-- []()
-
-### **_Future Developments_**
-
-- Checkout process
+- Return ticket
+- User can checkout
+- 3rd party API
+- Create ticket from booking a flight
